@@ -18,10 +18,9 @@ const SingleContact = ({item}) => {
   return(
     <div>
       <div className="col s10">
-        <div className="card indigo lighten-1">
+        <div className="card-panel small indigo lighten-1">
           <div className="card-content white-text">
-          <span className="card-title">{item.id}</span>
-            <span className="card-title">{item.firstName} {item.lastName}</span>
+            <span className="card-title">{item.id}.{item.firstName} {item.lastName}</span>
           </div>
           <div className="card-action blue-text text-lighten-4">
             <p>{item.email}</p>

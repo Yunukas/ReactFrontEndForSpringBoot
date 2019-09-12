@@ -6,8 +6,8 @@ function App() {
   return (
     <div className="container-fluid">
       <nav>
-        <div className="nav-wrapper center-align">
-        <a href="/" className="brand-logo"><i class="material-icons">cloud</i>Contacts</a>
+        <div className="nav-wrapper">
+        <a href="/" className="brand-logo"><i className="material-icons">cloud</i>Contacts</a>
         </div>
       </nav>
       <div className="row">

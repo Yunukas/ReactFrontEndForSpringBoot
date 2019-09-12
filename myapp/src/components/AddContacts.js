@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 export default class AddContacts extends Component {
-    submitContact(event) {
+    submitContact = (event) => {
         event.preventDefault();
 
         let contact = {
@@ -26,25 +26,28 @@ export default class AddContacts extends Component {
   render(){
     return (
       <div>
-        <form className="col s12" onSubmit={this.submitContact.bind(this)}>
+        <form className="col s12" onSubmit={this.submitContact}>
+        <blockquote>Add Contact</blockquote>
           <div className="row">
             <div className="input-field col s6">
-              <input placeholder="" ref="firstName" type="text" className="validate"/>
+              <input placeholder="" ref="firstName" type="text" className="validate" required="true" minlength="2" maxlength="30"/>
               <label htmlFor="firstName">First Name</label>
             </div>
             <div className="input-field col s6">
-              <input placeholder=""  ref="lastName" type="text" className="validate"/>
+              <input placeholder=""  ref="lastName" type="text" className="validate" required="true" minlength="2" maxlength="30"/>
               <label htmlFor="lastName">Last Name</label>
             </div>
           </div>
           <div className="row">
             <div className="input-field col s12">
-              <input placeholder=""  ref="email" type="email" className="validate"/>
+              <input placeholder=""  ref="email" type="email" className="validate" required="true" minlength="8" maxlength="30"/>
               <label htmlFor="email">Email</label>
             </div>
           </div>
           <div className="row">
-            <button className="waves-effect waves-light btn" type="submit" name="action">Submit</button>
+            <div className="input-field col s2">
+              <button className="waves-effect waves-light btn" type="submit" name="action">Submit</button>
+            </div>
           </div>
         </form>
       </div>

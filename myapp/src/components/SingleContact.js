@@ -1,20 +1,6 @@
 import React from 'react';
 
-const submitDelete = (id) => {
-    //event.preventDefault();
-    console.log(id);
-    // let id = this.refs.id.value;
-    let url = "http://localhost:8080/api/contacts/delete/"+id;
-    fetch(url, {
-        method: "DELETE",
-    })
-    .then(response => response.text())
-    .catch((error) => console.log('Error from DeleteContact => ' + error));
-
-    // console.log(url);
-}
-const SingleContact = ({item}) => {
-
+const SingleContact = ({item, onClick}) => {
   return(
     <div>
       <div className="col s10">
@@ -29,10 +15,10 @@ const SingleContact = ({item}) => {
       </div>
       <div className="col s2">
           <div className="input-field">
-              <button className="btn-floating btn-large waves-effect waves-light red" onClick={() => submitDelete(item.id)}>
-                      <i className="material-icons">remove</i>
-              </button>
-            </div>
+            <button className="btn-floating btn-large waves-effect waves-light red" onClick={() => onClick(item.id)}>
+                    <i className="material-icons">remove</i>
+            </button>
+          </div>
       </div>
     </div>
   );

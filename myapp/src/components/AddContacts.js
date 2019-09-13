@@ -30,17 +30,17 @@ export default class AddContacts extends Component {
         <blockquote>Add Contact</blockquote>
           <div className="row">
             <div className="input-field col s6">
-              <input placeholder="" ref="firstName" type="text" className="validate" required="true" minlength="2" maxlength="30"/>
+              <input placeholder="" ref="firstName" type="text" className="validate" required={true} minLength="2" maxLength="30"/>
               <label htmlFor="firstName">First Name</label>
             </div>
             <div className="input-field col s6">
-              <input placeholder=""  ref="lastName" type="text" className="validate" required="true" minlength="2" maxlength="30"/>
+              <input placeholder=""  ref="lastName" type="text" className="validate" required={true} minLength="2" maxLength="30"/>
               <label htmlFor="lastName">Last Name</label>
             </div>
           </div>
           <div className="row">
             <div className="input-field col s12">
-              <input placeholder=""  ref="email" type="email" className="validate" required="true" minlength="8" maxlength="30"/>
+              <input placeholder=""  ref="email" type="email" className="validate" required={true} minLength="8" maxLength="30"/>
               <label htmlFor="email">Email</label>
             </div>
           </div>
